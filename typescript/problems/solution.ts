@@ -11,3 +11,9 @@ var defangIPaddr = function (address: string): string {
     }
     return defanged
 };
+
+// runtime 33 ms (top 100%). Not my solution
+
+var fastestSolution = function (address: string) {
+    return address.split(".").join("[.]")
+};
