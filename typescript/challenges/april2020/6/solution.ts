@@ -2,7 +2,7 @@
 
 var groupAnagrams = function (strs: string[]): string[][] {
     const uniques = {};
-    const toSortedStr = str => str.split('').sort().join('')
+    const toSortedStr = (str: string) => str.split('').sort().join('')
     for (let str of strs) {
         const sorted = toSortedStr(str)
         if (sorted in uniques) {
