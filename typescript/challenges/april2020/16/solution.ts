@@ -1,3 +1,5 @@
+// TODO: Restudy well with differet approaches (brute, dp, etc)
+
 var checkValidString = function (s: string): boolean {
   let l = 0;
   let h = 0;
