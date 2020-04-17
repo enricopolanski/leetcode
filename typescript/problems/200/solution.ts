@@ -2,7 +2,7 @@
 
 type Grid = ("1" | "0")[][]
 
-var numIslands = function (grid: Grid): number {
+export var numIslands = function (grid: Grid): number {
 
   const zeroNeighbours = (i, j) => {
     if (i < 0 || i >= grid.length || j < 0 || j >= grid[i].length || grid[i][j] === '0') return;
