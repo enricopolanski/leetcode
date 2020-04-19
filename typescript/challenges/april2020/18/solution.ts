@@ -3,20 +3,20 @@
 export var minPathSum = function (grid: number[][]) {
 
   const
-    rows = grid.length,
-    cols = grid[0].length
+    rowsLength = grid.length,
+    colsLength = grid[0].length
 
-  for (let r = 0; r < rows; r++)
-    for (let c = 0; c < cols; c++)
-      if (r !== 0 || c !== 0) {
+  for (let row = 0; row < rowsLength; ++row)
+    for (let col = 0; col < colsLength; col++)
+      if (row !== 0 || col !== 0) {
 
-        if (r === 0)
-          grid[r][c] = grid[r][c - 1] + grid[r][c];
-        else if (c === 0)
-          grid[r][c] = grid[r - 1][c] + grid[r][c];
+        if (row === 0)
+          grid[row][col] = grid[row][col - 1] + grid[row][col];
+        else if (col === 0)
+          grid[row][col] = grid[row - 1][col] + grid[row][col];
         else
-          grid[r][c] = Math.min(grid[r][c - 1], grid[r - 1][c]) + grid[r][c];
+          grid[row][col] = Math.min(grid[row][col - 1], grid[row - 1][col]) + grid[row][col];
       }
 
-  return grid[rows - 1][cols - 1];
+  return grid[rowsLength - 1][colsLength - 1];
 };
